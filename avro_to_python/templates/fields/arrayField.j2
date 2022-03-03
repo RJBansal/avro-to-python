@@ -6,7 +6,7 @@
             for element in values:
                 {#- handle tons of types which sucks... -#}
                 {%- if field.array_item_type.fieldtype == 'reference' %}
-                self.{{name}}.append({{field.array_item_type.reference_name}}(element))
+                self.{{name}}.append(element)
                 {%- elif field.array_item_type.fieldtype == 'primitive'%}
                 if isinstance(element, {{primitive_type_map[field.array_item_type.avrotype]}}):
                     self.{{name}}.append(element)

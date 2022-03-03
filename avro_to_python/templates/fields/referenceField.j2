@@ -1,7 +1,7 @@
 {%- block reference %}
     def set_{{name}}(self, values: {{field.reference_name}}) -> None:
 
-        self.{{name}} = {{field.reference_name}}(values)
+        self.{{name}} = values
 
     def get_{{name}}(self) -> {{field.reference_name}}:
 
