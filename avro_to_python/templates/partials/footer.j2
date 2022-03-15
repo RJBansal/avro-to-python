@@ -2,6 +2,6 @@
     def serialize(self) -> None:
         return json.dumps(self, default=default_json_serialize)
 
-    def toDict(self) -> None:
-        return todict(self)
+    def toString(self) -> None:
+        return str(todict(self))
 {% endblock -%}
