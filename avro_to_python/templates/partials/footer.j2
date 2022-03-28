@@ -1,10 +1,13 @@
 {%- block footer %}
     def serialize(self) -> None:
+
         return json.dumps(self, default=default_json_serialize)
 
     def toString(self) -> None:
+
         return str(todict(self))
 
     def toDict(self) -> None:
+
         return todict(self)
 {% endblock -%}
